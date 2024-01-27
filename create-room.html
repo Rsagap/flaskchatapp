@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Room</title>
+    <style type="text/css">
+        .create-room-container {
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+    <div class="create-room-container">
+        <h2>Create a New Room</h2>
+        <form id="createRoomForm" action="/chatroom" method="POST">
+            <div class="form-group">
+                <label for="room-name">Room Name</label>
+                <input type="text" id="room-name" name="room-name" required>
+            </div>
+            <button type="submit">Create and Join Room</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('createRoomForm').onsubmit = function(event) {
+            event.preventDefault();
+            const roomName = document.getElementById('room-name').value;
+            createRoom(roomName);
+        };
+
+        function createRoom(roomName) {
+            // Placeholder for create room logic
+            window.location.replace("chatroom");
+            alert("Room '" + roomName + "' created and joining...");
+
+            // In a real application, you would likely make a server request here
+        }
+    </script>
+</body>
+</html>
