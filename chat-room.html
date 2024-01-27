@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Room</title>
+    <style type="text/css">
+        .chat-container {
+    width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.chat-box {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: left;
+}
+
+.message {
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+}
+
+form {
+    display: flex;
+}
+
+form input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+}
+
+form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <h2>Room Name: Example Room</h2>
+        <div id="chat-box" class="chat-box">
+            <!-- Messages will appear here -->
+        </div>
+        <form id="messageForm">
+            <input type="text" id="messageInput" placeholder="Type a message..." required>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('messageForm').onsubmit = function(event) {
+            event.preventDefault();
+            const messageBox = document.getElementById('chat-box');
+            const messageInput = document.getElementById('messageInput');
+            const newMessage = messageInput.value;
+            messageBox.innerHTML += '<div class="message">' + newMessage + '</div>';
+            messageInput.value = '';
+        };
+    </script>
+</body>
+</html>
