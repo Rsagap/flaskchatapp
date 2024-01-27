@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Options</title>
+    <style type="text/css">
+        .rooms-container {
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.room-actions button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.room-actions button:hover {
+    background-color: #0056b3;
+}
+    </style>
+</head>
+<body>
+    <div class="rooms-container">
+        <h2>Room Options</h2>
+        <div class="room-actions">
+            <button onclick="location.href='join'">Join Existing Room</button>
+            <button onclick="location.href='create'">Create a New Room</button>
+        </div>
+    </div>
+</body>
+</html>
