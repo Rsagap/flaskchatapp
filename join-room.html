@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join a Room</title>
+    <style type="text/css">
+        .join-room-container {
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.room-list {
+    list-style: none;
+    padding: 0;
+}
+
+.room-list li {
+    margin-bottom: 10px;
+}
+
+.room-list button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.room-list button:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+    <div class="join-room-container">
+        <h2>Available Rooms</h2>
+        <ul class="room-list">
+            <li><button onclick="joinRoom('Room 1')">Room 1</button></li>
+            <li><button onclick="joinRoom('Room 2')">Room 2</button></li>
+            <li><button onclick="joinRoom('Room 3')">Room 3</button></li>
+            <!-- More rooms can be added here -->
+        </ul>
+    </div>
+
+    <script>
+        function joinRoom(roomName) {
+            // Placeholder for joining room logic
+            alert("Joining " + roomName);
+            // In a real application, you would likely make a server request here
+        }
+    </script>
+</body>
+</html>
